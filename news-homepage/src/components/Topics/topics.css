@@ -1,9 +1,10 @@
 .containerMain {
   /* display: flex; */
-  margin: 70px 0;
+  margin: 100px 0;
   display: grid;
-  grid-template-columns: 360px 360px 360px;
+  grid-template-columns: 460px 620px auto;
   gap: 60px;
+  height: 20%;
 }
 
 .topic-card {

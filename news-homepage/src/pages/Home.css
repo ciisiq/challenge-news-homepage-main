@@ -2,12 +2,13 @@ main {
   display: flex;
   gap: 20px;
   width: 100%;
-  height: 570px;
+  height: 57%;
 }
 
 .homeImage {
   width: 100%;
-  object-fit: cover;
+  height: 70%;
+  /* object-fit: cover; */
 }
 
 .r-side {
@@ -16,13 +17,14 @@ main {
 
 .l-side {
   width: 30%;
-  height: 100%;
+  height: 110%;
 }
 
 .textContainer {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  align-items: end;
+  height: 37%;
 }
 
 .r-side-text {

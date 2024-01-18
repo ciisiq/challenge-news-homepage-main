@@ -3,7 +3,7 @@ import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import Topics from '../components/Topics/Topics';
 import main from '../../../assets/images/image-web-3-desktop.jpg';
-import './homepage.css';
+import './Home.css';
 
 export default function Home() {
   return (
@@ -35,9 +35,8 @@ export default function Home() {
           <CardNew />
         </section>
       </main>
-      <section>
-        <Topics />
-      </section>
+
+      <Topics />
       <Footer />
     </>
   );
