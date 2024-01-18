@@ -35,7 +35,9 @@ export default function Home() {
           <CardNew />
         </section>
       </main>
-      <section>{/* <Topics /> */}</section>
+      <section>
+        <Topics />
+      </section>
       {/* <Footer /> */}
     </>
   );
