@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+  height: 70px;
+}
+
+.footerLink {
+  color: var(--primary-soft-red);
+  font-weight: bold;
+}
+
+.footerLink:hover {
+  color: var(--neutral-very-dark-blue);
+}
