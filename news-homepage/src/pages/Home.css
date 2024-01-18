@@ -40,7 +40,7 @@ main {
   padding-right: 10px;
 }
 
-button {
+.readmore-btn {
   background-color: var(--primary-soft-red);
   color: var(--neutral-off-white);
   padding: 10px 20px;
@@ -54,7 +54,34 @@ button {
   max-width: 55%;
 }
 
-button:hover {
+.readmore-btn:hover {
   background-color: var(--neutral-very-dark-blue);
   color: var(--neutral-off-white);
+}
+
+@media only screen and (max-width: 390px) {
+  main {
+    flex-direction: column;
+    height: calc(100% - 70px);
+    gap: 0px;
+  }
+
+  .textContainer {
+    flex-direction: column;
+  }
+
+  .r-side,
+  .l-side {
+    width: 100%;
+  }
+
+  .l-side-text {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  .r-side-text {
+    margin-top: 20px;
+  }
 }

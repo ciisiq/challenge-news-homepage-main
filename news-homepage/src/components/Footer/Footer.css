@@ -15,3 +15,9 @@ footer {
 .footerLink:hover {
   color: var(--neutral-very-dark-blue);
 }
+
+@media only screen and (max-width: 390px) {
+  footer {
+    text-align: center;
+  }
+}

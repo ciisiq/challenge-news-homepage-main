@@ -27,7 +27,7 @@ export default function Home() {
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
               </p>
-              <button>READ MORE</button>
+              <button className="readmore-btn">READ MORE</button>
             </div>
           </div>
         </section>
