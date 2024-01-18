@@ -1,4 +1,5 @@
 import logo from '../../../public/assets/images/logo.svg';
+import './navbar.css';
 
 export default function Navbar() {
   return (
