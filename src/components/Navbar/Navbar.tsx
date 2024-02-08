@@ -5,48 +5,44 @@ import open from '../../assets/images/icon-menu.svg';
 import close from '../../assets/images/icon-menu-close.svg';
 
 export default function Navbar() {
-  const [navbar, setnavbar] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
   return (
-    <>
-      <header>
-        <div>
+    <header>
+      <nav>
+        <div className="logo">
           <img src={logo} alt="company logo with W format" />
         </div>
 
-        <div className="mobile-menu">
-          {/* Hamburger Button for mobile */}
-          <button className="menu-btn open" onClick={() => setnavbar(!navbar)}>
+        {/* Hamburger Button for mobile */}
+        <div className="toggle_btn">
+          <button className="menu-btn" onClick={() => setNavbar(!navbar)}>
             {navbar ? (
-              <img src={close} alt="open icon for to open menu" />
+              <img src={close} alt="close icon for closing menu" />
             ) : (
-              <img src={open} alt="open icon for to close menu" />
+              <img src={open} alt="open icon for opening menu" />
             )}
           </button>
         </div>
 
-        <div>
-          <nav style={{ display: navbar ? 'block' : 'none' }}>
-            <ul className="links">
-              <li>
-                <a>Home</a>
-              </li>
-              <li>
-                <a>New</a>
-              </li>
-              <li>
-                <a>Popular</a>
-              </li>
-              <li>
-                <a>Trending</a>
-              </li>
-              <li>
-                <a>Categories</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </>
+        <ul className={`links ${navbar ? 'open' : ''}`}>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>New</a>
+          </li>
+          <li>
+            <a>Popular</a>
+          </li>
+          <li>
+            <a>Trending</a>
+          </li>
+          <li>
+            <a>Categories</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
