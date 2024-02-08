@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import logo from '../../../public/assets/images/logo.svg';
+import logo from '../../assets/images/logo.svg';
 import './navbar.css';
-import open from '../../../public/assets/images/icon-menu.svg';
-import close from '../../../public/assets/images/icon-menu-close.svg';
+import open from '../../assets/images/icon-menu.svg';
+import close from '../../assets/images/icon-menu-close.svg';
 
 export default function Navbar() {
   const [navbar, setnavbar] = useState(false);
@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <div>
           <nav style={{ display: navbar ? 'block' : 'none' }}>
-            <ul>
+            <ul className="links">
               <li>
                 <a>Home</a>
               </li>

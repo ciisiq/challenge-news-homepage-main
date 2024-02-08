@@ -2,10 +2,23 @@ import CardNew from '../components/CardNew/CardNew';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import Topics from '../components/Topics/Topics';
-import main from '../../../assets/images/image-web-3-desktop.jpg';
+import main from '../assets/images/image-web-3-desktop.jpg';
+import mainMobile from '../assets/images/image-web-3-mobile.jpg';
 import './Home.css';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -13,7 +26,7 @@ export default function Home() {
         <section className="r-side">
           <img
             className="homeImage"
-            src={main}
+            src={windowWidth <= 768 ? mainMobile : main}
             alt="top image with many colorful geometric"
           />
           <div className="textContainer">
