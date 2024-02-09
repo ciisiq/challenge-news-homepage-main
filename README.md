@@ -25,7 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](<./images/screenshot%20(1).png>)<br/><br/>
+![](<./images/screenshot%20(2).png>)
 
 ### Links
 
