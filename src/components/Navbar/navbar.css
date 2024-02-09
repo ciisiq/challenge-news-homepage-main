@@ -1,62 +1,92 @@
-header {
-  margin-bottom: 2rem;
-  position: relative;
-  padding: 0 2rem;
-}
-
-nav {
-  height: 70px;
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.25rem;
 }
 
-.logo img {
-  height: 40px;
+.header nav {
+  opacity: 0;
+  z-index: -100;
+  /* transition: all 0.3s ease-in-out; */
 }
 
-.links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+nav.open {
+  position: fixed;
+  opacity: 1;
+  color: var(--neutral-very-dark-blue);
+  background-color: var(--background-main-page);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 75vw;
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  z-index: 100;
 }
 
-.links li {
-  cursor: pointer;
-}
-
-.toggle_btn {
-  display: none;
-}
-
-.menu-btn {
+.header .menu_buttom button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
+  z-index: 10;
 }
 
-.links.open {
-  display: flex;
-  flex-direction: column;
+#menu_close {
   position: absolute;
-  top: 70px;
-  right: 0;
-  width: 60%;
-  background-color: var(--background-main-page);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  color: var(--neutral-very-dark-blue);
-
-  padding: 2.5rem;
-  font-size: 1.5rem;
+  right: 1.25rem;
+  top: 1.25rem;
 }
 
-@media (max-width: 992px) {
-  .toggle_btn {
-    display: block;
+.header nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header nav ul li {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 2rem 1.25rem;
   }
 
-  .links {
+  .header nav {
+    opacity: 1;
+    z-index: auto;
+  }
+
+  .header nav.open {
+    position: relative;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: auto;
+  }
+
+  .header nav ul {
+    position: relative;
+    top: 0;
+    transform: translateY(0%);
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .header nav ul li {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .header nav ul li:hover {
+    color: var(--primary-soft-red);
+  }
+
+  .menu_buttom {
     display: none;
   }
 }

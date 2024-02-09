@@ -4,18 +4,17 @@ import './topics.css';
 export default function Topics() {
   return (
     <>
-      <div className="containerMain">
+      <div className="cards container">
         {topic.map((topic) => (
-          <div className="topic-card" key={topic.id}>
-            <div className="r-side-topics">
-              <img className="topicImage" src={topic.image} alt={topic.title} />
+          <article key={topic.id}>
+            <img src={topic.image} alt={topic.title} />
+
+            <div>
+              <span>{topic.seq}</span>
+              <h4>{topic.title}</h4>
+              <p>{topic.intro}</p>
             </div>
-            <div className="l-side-topics">
-              <p className="t-seq">{topic.seq}</p>
-              <h4 className="t-title">{topic.title}</h4>
-              <p className="t-intro">{topic.intro}</p>
-            </div>
-          </div>
+          </article>
         ))}
       </div>
     </>

@@ -4,17 +4,17 @@ import './CardNew.css';
 export default function CardNew() {
   return (
     <>
-      <div className="containeirNew">
-        <h1 className="titleNew">New</h1>
-        <div className="cardNewCont">
-          {newsCard.map((card) => (
-            <div className="new-wrapp" key={card.id}>
-              <h3 className="subtitleNew">{card.title}</h3>
-              <p className="introNew">{card.intro}</p>
-              <div className="line"></div>
-            </div>
-          ))}
-        </div>
+      <div className="containeir_new">
+        <h2>New</h2>
+        {newsCard.map((card) => (
+          <article key={card.id}>
+            {/* <div className="new-wrapp" > */}
+            <h3>{card.title}</h3>
+            <p>{card.intro}</p>
+            {/* <div className="line"></div> */}
+            {/* </div> */}
+          </article>
+        ))}
       </div>
     </>
   );

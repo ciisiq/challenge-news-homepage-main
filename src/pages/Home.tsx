@@ -23,32 +23,30 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <section className="r-side">
-          <img
-            className="homeImage"
-            src={windowWidth <= 768 ? mainMobile : main}
-            alt="top image with many colorful geometric"
-          />
-          <div className="textContainer">
-            <div className="r-side-text">
+        <section className="showcase">
+          <div>
+            <img
+              src={windowWidth <= 768 ? mainMobile : main}
+              alt="top image with many colorful geometric"
+            />
+
+            <article className="text_Container">
               <h1>The Bright Future of Web 3.0?</h1>
-            </div>
-            <div className="l-side-text">
-              <p>
-                {' '}
-                We dive into the next evolution of the web that claims to put
-                the power of the platforms back into the hands of the people.
-                But is it really fulfilling its promise?
-              </p>
-              <button className="readmore-btn">READ MORE</button>
-            </div>
+
+              <div>
+                <p className="description_home">
+                  {' '}
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button className="readmore_btn">Read More</button>
+              </div>
+            </article>
           </div>
-        </section>
-        <section className="l-side">
           <CardNew />
         </section>
       </main>
-
       <Topics />
       <Footer />
     </>

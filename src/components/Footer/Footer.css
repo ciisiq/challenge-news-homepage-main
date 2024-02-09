@@ -2,22 +2,22 @@ footer {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-bottom: 20px;
   align-items: center;
-  height: 10%;
+  height: 70px;
+  text-align: center;
 }
 
-.footerLink {
+footer div a {
   color: var(--primary-soft-red);
   font-weight: bold;
 }
 
-.footerLink:hover {
+footer div a:hover {
   color: var(--neutral-very-dark-blue);
 }
 
-@media only screen and (max-width: 390px) {
+@media (min-width: 1024px) {
   footer {
-    text-align: center;
+    font-size: 1rem;
   }
 }
