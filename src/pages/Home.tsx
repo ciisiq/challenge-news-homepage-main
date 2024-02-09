@@ -44,7 +44,10 @@ export default function Home() {
               </div>
             </article>
           </div>
-          <CardNew />
+
+          <div className="news_card">
+            <CardNew />
+          </div>
         </section>
       </main>
       <Topics />

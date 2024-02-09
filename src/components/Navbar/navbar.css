@@ -74,7 +74,7 @@ nav.open {
     top: 0;
     transform: translateY(0%);
     display: flex;
-    gap: 1.25rem;
+    gap: 2em;
   }
 
   .header nav ul li {
